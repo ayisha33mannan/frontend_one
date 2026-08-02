@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- hero page -->
-    <header>
+    <header >
         <!-- nav start -->
         <nav>
             <ul>
             <!-- nav links -->
-            <li><a href="" >home</a></li> 
-            <li><a href="" >About</a></li>
+            <li><a href="index.html" >home</a></li> 
+            <li><a href="#about" >About</a></li>
+            <li><a href="#service" >Services</a></li>
             <li><a href="" >Gallery</a></li>
             <li><a href="" >contact</a></li>
         </ul>
@@ -24,18 +30,62 @@
             <h1>OLIYO</h1>
             <h2>Discover Your Dream Home</h2>
         </div>
-        <!-- blur to merge -->
+
+        <!-- blur to merge -->  
         <div class="blur"></div>
     </header>
-    <!-- <section class="aboutSec"> -->
-        <div class="aboutGrid">
-            <div class="about">
-                <h1>About Us</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus mollitia, voluptas quo minima deserunt beatae quod molestias aspernatur quibusdam soluta excepturi quidem quam laboriosam, placeat recusandae magnam nostrum, nesciunt in.</p>
+
+    <!-- about section -->
+    <section id="about" class="aboutGrid">
+        <div class="about">
+            <h2>About Us</h2>
+            <p id="abtSub">Building Dreams, Creating Legacies</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus mollitia, voluptas quo minima deserunt beatae quod molestias aspernatur quibusdam soluta excepturi quidem quam laboriosam, placeat recusandae magnam nostrum, nesciunt in.</p>
+            <div class="points">
+                <p><span class="span">10+</span> Years in market</p>
+                <p><span class="span">1000+</span> Successful deals</p>
+                <p><span class="span">95%</span> Satisfied clients</p>
+                <p><span class="span">4000+</span> Properties in our database</p>
+                
             </div>
-            <div class="pic"><img src="image/about.png" alt="house without bg"></div>
         </div>
-    <!-- </section> -->
+        <div class="pic"><img src="image/about.png" alt="house without bg"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="service" class="service">
+        <h2>Our Services</h2>
+        <p id="sub">Comprehensive real estate solutions tailored to your needs</p>
+        <div class="imageGrid">
+            <div class="image">
+                <img src="image/one.jpg" alt="image one">
+                <h4>0.1</h4>
+                <h3>Property Buying</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ipsum delectus deserunt quaerat numquam.</p>
+            </div>
+            <div class="image">
+                <img src="image/two.jpg" alt="image two">
+                <h4>0.2</h4>
+                <h3>Property Selling</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam assumenda pariatur cum tenetur dolor.</p>
+            </div>
+            <div class="image">
+                <img src="image/three.jpg" alt="image three">
+                <h4>0.3</h4>
+                <h3>Property Management</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis corporis aperiam ducimus vel distinctio?</p>
+            </div>
+            <div class="image">
+                <img src="image/four.jpg" alt="image four">
+                <h4>0.4</h4>
+                <h3>Investment Advice</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis corporis aperiam ducimus vel distinctio?</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery section-->
+    
 </body>
-</html>
+</html> 
 
