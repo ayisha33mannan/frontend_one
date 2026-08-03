@@ -19,7 +19,7 @@ h2, h3, h4{
     font-family: "Playfair Display", serif;
 }
 
-p, a{
+p, a, span{
     font-family: "Inter", sans-serif;
 }
 
@@ -263,3 +263,75 @@ nav ul li a:after {
     padding: 10px 0;
 }
 
+/* -----------------gallery section---------- */
+
+.gallery{
+    height: 100vh;
+    width: 100%;
+    padding : 40px;
+    background-color: #EDEDED;
+}
+.gallery h2{
+    color: #142800;
+    font-size: 48px;
+}
+.gallery #gSub{
+    font-size: 16px;
+    font-weight: 500;
+    color:#000000;
+    letter-spacing: 3px;
+}
+.gallery-grid{
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 30px;
+    transition: all 0.3s ease;
+}
+.item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    aspect-ratio: 4/3;
+}
+
+.item:hover {
+    transform: scale(1.03);
+}
+
+.item img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 40px 20px 20px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3 {
+    color: #F4CE14;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.overlay p {
+    font-size: 16px;
+    opacity: 0.8;
+}
