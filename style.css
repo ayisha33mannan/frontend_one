@@ -8,7 +8,13 @@ html{
     overflow-x: hidden;
 }
 body{
-    background-color: #142800;
+    background: linear-gradient(
+        to bottom,
+        #142800 0%,
+        #142800 50%,
+        #EDEDED 50%,
+        #EDEDED 100%
+    );  
 }
 /* -----------------font---------- */
 h1{
@@ -99,7 +105,6 @@ nav ul li a:after {
     font-weight: 800;
     letter-spacing: 8px;
     color: #F4CE14 ;
-    -webkit-text-stroke: 1px black; 
     margin-bottom: -20px;
 }
 
@@ -108,7 +113,6 @@ nav ul li a:after {
     font-weight: 600;
     letter-spacing: 12px;
     color: #EDEDED ;
-    /* -webkit-text-stroke: 0.5px black;  */
 }
 
 /* -----------------blur to blend---------- */
@@ -120,7 +124,6 @@ nav ul li a:after {
     height: 100px;
     background: linear-gradient(to top, #142800, transparent);
 }
-
 
 /* -----------------about section---------- */
 
@@ -139,7 +142,6 @@ nav ul li a:after {
     
 .about {
     grid-column: span 2 / span 2;
-    /* margin-top: 20px; */
     margin-left: 20px;
 }
 .about h2{
@@ -268,6 +270,7 @@ nav ul li a:after {
 .gallery{
     height: 100vh;
     width: 100%;
+    margin-top: 40px;
     padding : 40px;
     background-color: #EDEDED;
 }
@@ -334,4 +337,76 @@ nav ul li a:after {
 .overlay p {
     font-size: 16px;
     opacity: 0.8;
+}
+
+/* -----------------Contact section---------- */
+
+/* .contact{
+    height: 100vh;
+    width: 100%;
+    padding-top: 40px; 
+    background-color: #EDEDED;
+}
+.contact h2{
+    color: #142800;
+    font-size: 48px;
+    padding-left: 40px;
+}
+.contact #cSub{
+    font-size: 16px;
+    font-weight: 500;
+    color:#000000;
+    letter-spacing: 3px;
+    padding-left: 40px;
+}
+.contact-grid{
+    height: 80%;
+    width: 100%;
+    margin-top: 40px;
+    background: linear-gradient(rgba(22, 22, 23, 0.7),rgba(22, 22, 23,0.7)), url(image/gall8.jpg);
+    background-position: center;
+    background-size: cover;
+} */
+.contact{
+    margin: 100px auto;
+    width: 80%;
+    background: linear-gradient(rgba(22, 22, 23, 0.7),rgba(22, 22, 23,0.7)), url(image/gall8.jpg);
+    background-position: center;
+    background-size: cover; 
+    text-align: center;
+    padding: 80px 0;
+    border-radius: 10px;
+    box-shadow: 1px 0px 34px 18px rgba(0, 0, 0, 0.35);
+}
+.contact h2{
+    color: #EDEDED;
+    padding: 5px;
+    letter-spacing: 1px;
+}
+.contact h3{
+    color: #F4CE14;
+    padding: 5px;   
+    letter-spacing: 2px;
+}
+.contact span{
+    color: #EDEDED;
+    padding: 5px;
+}
+.contact p{
+    color: #F4CE14;
+    padding: 5px;  
+}
+.contact button{
+    margin: 20px;
+    padding: 5px 20px;
+    color: #F4CE14;
+    border: 2px solid #EDEDED;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact button:hover{
+    background-color: #F4CE14;
+    color: #142800;
+    transform: scale(1.1);
 }
