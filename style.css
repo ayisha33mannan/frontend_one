@@ -16,6 +16,20 @@ body{
         #EDEDED 100%
     );  
 }
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #142800;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 1s ease-in-out; 
+}
 /* -----------------font---------- */
 h1{
     font-family: "Montserrat", sans-serif;
@@ -97,7 +111,6 @@ nav ul li a:after {
     position: absolute;
     top: 60%;
     left: 5%;
-    text-shadow: 0 4px 24px rgba(236, 240, 233, 0.6);
 }
 
 .text h1 {
@@ -184,20 +197,24 @@ nav ul li a:after {
     grid-column-start: 3;
 }
 .pic img{
-    border-radius: 8px; 
+    border-radius: 8px;     
+    transition: transform 0.3s ease;
 } 
+.pic img:hover{
+    transform: scale(1.03);
+}
 
 /* -----------------services section---------- */
 
 .service {
-        height: 110vh;
-        width: 100%;
-        margin-top: 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;            
-        position: relative;
+    height: 100vh;
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;            
+    position: relative;
 }
         
 .service::before {
@@ -246,7 +263,11 @@ nav ul li a:after {
     height: 380px;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+    transition: transform 1s ease;
+} 
+.image img:hover{
+    box-shadow: 2px 4px 26px 8px rgba(0, 0, 0, 0.75);
 }
 .image h4{
     color: #000000;
@@ -268,7 +289,7 @@ nav ul li a:after {
 /* -----------------gallery section---------- */
 
 .gallery{
-    height: 100vh;
+    /* min-height: 50vh; */
     width: 100%;
     margin-top: 40px;
     padding : 40px;
@@ -360,9 +381,96 @@ nav ul li a:after {
     font-weight: 700;
 }
 
+/* PDF styling */
+.pdf {
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; 
+
+}
+.pdf h3 {
+    color: #142800;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+.pdf .btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 50px;
+    background: #F4CE14;
+    color: #142800;
+    font-family:"Inter", sans-serif;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    transition:all 0.4s ease;
+}
+.pdf .btn-download i {
+    font-size: 16px;
+}
+.pdf .btn-download:hover {
+    background: #142800;
+    color: #F4CE14;
+    transform: scale(1.02);
+    font-weight: 700;
+}
+
+/* Responsive - */
+    /* @media (max-width: 768px) {
+        .pdf {
+            flex-direction: column;
+            gap: 15px;
+            padding: 25px 20px;
+            text-align: center;
+        }
+        
+        .pdf h3 {
+            white-space: normal; 
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        .pdf .btn-download {
+            padding: 12px 25px;
+            font-size: 14px;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .pdf {
+            padding: 20px 15px;
+            margin-top: 35px;
+        }
+        
+        .pdf h3 {
+            font-size: 14px;
+        }
+        
+        .pdf .btn-download {
+            padding: 10px 20px;
+            font-size: 13px;
+        }
+        
+        .pdf .btn-download i {
+            font-size: 16px;
+        }
+    } */
+
 /* -----------------Contact section---------- */
 .contact{
-    margin: 100px auto;
+    margin: 40px auto;
     width: 80%;
     background: linear-gradient(rgba(22, 22, 23, 0.7),rgba(22, 22, 23,0.7)), url(image/gall8.jpg);
     background-position: center;
@@ -407,3 +515,79 @@ nav ul li a:after {
     transform: scale(1.1);
     font-weight: 700;
 }
+
+/* -----------------footer section---------- */
+
+footer {
+    background: #142800;
+    padding: 40px 40px 20px;
+    margin-top: 0;
+}
+
+.footer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* top row*/
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;   
+    border-bottom: 1px solid rgba(237, 237, 237, 0.404);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-top h1 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #F4CE14;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(237, 237, 237, 0.1);
+    color: rgba(237, 237, 237, 0.5);
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(237, 237, 237, 0.5);
+}
+
+.social-link:hover {
+    background: #F4CE14;
+    color: #142800;
+    transform: scale(1.2);
+    font-weight: 700;
+}
+
+/* bottom row*/
+.footer-bottom {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #EDEDED;     
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
