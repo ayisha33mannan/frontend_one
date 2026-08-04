@@ -16,17 +16,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    <!-- Preloader -->
+    <div id="preloader"></div>
     <!-- hero page -->
     <header >
         <!-- nav start -->
         <nav>
             <ul>
             <!-- nav links -->
-            <li><a href="index.html" >home</a></li> 
-            <li><a href="#about" >About</a></li>
-            <li><a href="#service" >Services</a></li>
-            <li><a href="#gallery" >Properties</a></li>
-            <li><a href="#contact" >contact</a></li>
+            <li class="anchor"><a href="index.html" >home</a></li> 
+            <li class="anchor"><a href="#about" >About</a></li>
+            <li class="anchor"><a href="#service" >Services</a></li>
+            <li class="anchor"><a href="#gallery" >Properties</a></li>
+            <li class="anchor"><a href="#contact" >contact</a></li>
         </ul>
         </nav>
         <!-- Heading -->
@@ -49,8 +51,7 @@
                 <p><span class="span">10+</span> Years in market</p>
                 <p><span class="span">1000+</span> Successful deals</p>
                 <p><span class="span">95%</span> Satisfied clients</p>
-                <p><span class="span">4000+</span> Properties in our database</p>
-                
+                <p><span class="span">4000+</span> Properties in our database</p>  
             </div>
         </div>
         <div class="pic"><img src="image/about.png" alt="house without bg"></div>
@@ -178,17 +179,46 @@
         <button class="btn">LOAD MORE</button> 
     </section>
 
+    <!-- pdf download -->
+    <section class="pdf">
+        <h3 >Download our detailed property brochure for more information</h3>
+        <a href="pdf/brochure.pdf" download class="btn-download"> <i class="fas fa-download"></i> For More Details</a> 
+    </section>
+
     <!-- contact us -->
     <section id="contact" class="contact">
-        <h2>CONTACT US ON OUR TOLL FREE <br>NUMBER</h2>
+        <h2>CONTACT US ON OUR TOLL FREE NUMBER</h2>
         <h3><i class="fa-solid fa-phone"></i> +001 0800 5555</h3>
         <h3><i class="fa-solid fa-envelope"></i> info@oliyo.com</h3>
         <p><span>From</span> 09:00 AM to 10:00 PM.</p>            
         <button>CONTACT US</button>
     </section>
 
-    
+    <!--footer-->
+<footer>
+    <div class="footer">
+        <div class="footer-top">
+            <h1>OLIYO</h1>
+            <div class="social-icons">
+                <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 OLIYO Real Estate.</p>
+        </div>
+    </div>
+</footer>   
+
+    <!-- <section style="background-color: rgb(81, 140, 190); height: 100vh; width: 100%;" ></section>-->
+    <!-- gsap   link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js" integrity="sha512-oJ8QbaQThQoJZ7oEv+29jfPM6CcP+zUxh3PKJs1vyOhx0UraUrE7PQgeItu3dOuCJyrzWpoYMsVjkkPEBzbUqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollTrigger.min.js" integrity="sha512-OaIE7ud4P04EhnBuhEcm0wQSceIxbi2pV03oBLS/+F6ampfxsnxcIxOp7H2eF9G7N0kEht0VAzOLG+dTLSo17Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- lightbox js link -->
     <script src="lightbox-plus-jquery.js"></script> 
+    <script src="script.js"></script>
 </body>
 </html> 
 
