@@ -144,7 +144,8 @@ nav ul li a:after {
     height: 80vh;
     width: 100%;
     background-color: #142800;
-    padding: 20px 0 20px 20px;
+    padding: 20px;
+    padding-right:10px ;
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -397,7 +398,8 @@ nav ul li a:after {
     font-weight: 500;
     margin: 0;
     letter-spacing: 1px;
-    white-space: nowrap;
+    /* white-space: nowrap; */
+    
 }
 .pdf .btn-download {
     display: inline-flex;
@@ -549,110 +551,248 @@ footer {
 }
 
 /* -----------------Responsive section---------- */
-/* -----------------TABLET (1024px and below)-----------------*/
-@media (max-width:1024px){
+/* -----------------(1100px and below)-----------------*/
+@media (max-width:1100px){
+    .text{
+        top: 70%;
+    }
+    .text h1{
+        font-size:90px;
+        padding-bottom: 10px;
+    }
 
-.text h1{
-    font-size:90px;
-    padding-bottom: 10px;
+    .text h2{
+        font-size:24px;
+        letter-spacing:6px;
+    }
+
+    /* about  */
+
+    .aboutGrid  {
+        height: 50vh;
+    }
+    .about h2{
+        font-size: 40px;
+    }
+    .about #abtSub{
+        font-size: 12px;
+        letter-spacing: 2px;
+        padding-bottom: 20px;
+    }
+
+    .about p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .points {
+        margin-top: 20px;
+        gap: 5px;   
+    }
+    .points p{
+        font-size: 12px;
+    }
+
+    .pic img{
+        max-width: 500px;
+    } 
+
+    /* service */
+
+    .service{
+        height:auto;
+        padding:60px 0px;
+        margin-top: 20px;
+    }
+    .service h2 {
+        font-size: 40px;
+    }
+    .service #sub{
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    .image img {
+        height: 320px;
+    } 
+    .image h4{
+        font-size: 16px;
+    }
+    .image h3{
+        font-size: 20px;
+    }
+
+    /* gallery */
+
+    .gallery{
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+    .gallery h2{
+        font-size: 40px;
+    }
+    .gallery #gSub{
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    .gallery-grid{
+        grid-gap: 20px;
+    }
+
+    .overlay p {
+        font-size: 12px;
+    }
+    .gallery .btn {
+        padding: 15px 40px;
+    }
+
+    /* PDF styling */
+    .pdf {
+        height: auto;
+    }
+
+    .pdf .btn-download {
+        padding: 15px 30px;
+        letter-spacing: 1px;
+    }
+
+    .contact{
+        width:90%;
+    }
 }
 
-.text h2{
-    font-size:24px;
-    letter-spacing:6px;
-}
+/*-----------------(7950px and below)----------------- */
 
-/* about  */
+@media (max-width:950px){
 
-.aboutGrid  {
-    height: 50vh;
-}
-.about h2{
-    font-size: 40px;
-}
-.about #abtSub{
-    font-size: 12px;
-    letter-spacing: 2px;
-    padding-bottom: 20px;
-}
+    /* header */
+    nav{
+        padding: 40px 0 10px;
+        text-align: center;
+    }
+    ul li{
+        margin-left: 0px;
+    }
 
-.about p{
-    font-size: 16px;
-    line-height: 20px;
-}
+    ul li a{
+        font-size: 16px;
+    }
+    .text{
+        top: 70%;
+    }
+    
+    .text h1 {
+        font-size: 80px;
+        letter-spacing: 4px;
+    }
 
-.points {
-    margin-top: 20px;
-    gap: 5px;   
-}
-.points p{
-    font-size: 12px;
-}
+    .text h2 {
+        font-size: 22px;
+        letter-spacing: 8px;
+    }
 
-.pic img{
-    max-width: 500px;
-} 
+    /* headings in each section */
+    .about h2,
+    .service h2,
+    .gallery h2{
+        font-size:36px;
+    }
+    .about #abtSub,
+    .service #sub,
+    .gallery #gSub{
+        letter-spacing:1px;
+    }
 
-/* service */
+    /* about */
+    .aboutGrid{
+        grid-template-columns:1fr;
+        height:auto;
+        padding-bottom: 0;
+    }
+    .pic{
+        display: none;
+    }   
 
-.service{
-    height:auto;
-    padding:60px 0px;
-    margin-top: 20px;
-}
-.service h2 {
-    font-size: 40px;
-    padding-left: 40px;
-}
-.service #sub{
-    font-size: 12px;
-    letter-spacing: 2px;
-}
-.image img {
-    height: 320px;
-} 
-.image h4{
-    font-size: 16px;
-}
-.image h3{
-    font-size: 20px;
-}
+    .points span{
+        padding-right: 20px;
+    }
+    .pic img{
+        width: 400px;
+    }
+    /* service */
+     .service{
+        margin-top: 20px;
+    }
+    .imageGrid{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .service::before {
+        background: linear-gradient(
+            to bottom,
+            #142800 0%,
+            #EDEDED 50%,
+            #EDEDED 50%,
+            #EDEDED 100%
+        );
+    }
 
-/* gallery */
+    /* .pdf */
+    .pdf {
+        flex-direction: column;
+        gap: 15px;        
+        padding: 25px 20px;
+        text-align: center;
+    }
+    
+    .contact h2{
+        font-size:24px;
+    }
+}   
 
-.gallery{
-    margin-top: 0px;
-    padding-top: 0px;
-}
-.gallery h2{
-    font-size: 40px;
-}
-.gallery #gSub{
-    font-size: 12px;
-    letter-spacing: 2px;
-}
-.gallery-grid{
-    grid-gap: 20px;
-}
+/*-----------------(600px and below)----------------- */
+@media (max-width:600px){ 
+    nav{
+        text-align:center;
+        padding-top: 20px;
+        background-color: #14280074;
+    }
 
-.overlay p {
-    font-size: 12px;
-}
-.gallery .btn {
-    padding: 15px 40px;
-}
+    ul li{
+        display:block;
+        margin:10px 0;
+    }   
+    /* header */    
+    ul li a{
+        font-size: 12px;
+    }
+    .text h1 {
+        font-size: 60px;
+        letter-spacing: 4px;
+    }
+    .text h2 {
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
 
-/* PDF styling */
-.pdf {
-    height: auto;
+    .contact h2{
+        font-size:20px;
+    }
+
+    /* footer */
+    footer {
+        padding: 25px 15px 12px;
+    }
+    .footer-top{
+        padding-bottom: 10px;
+    }
+    .social-link {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+    .social-icons {
+        gap: 10px;
+    }
+    .footer-bottom{
+        padding-top: 10px;
+    }
 }
-
-.pdf .btn-download {
-    padding: 15px 30px;
-    letter-spacing: 1px;
-}
-
-.contact{
-    width:90%;
-}}
-
