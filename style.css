@@ -361,7 +361,7 @@ nav ul li a:after {
 }
 .gallery .btn {
     display: block;
-    margin: 20px auto 0 ;
+    margin: 30px auto 0 ;
     padding: 15px 50px;
     background: #142800;
     color: #EDEDED;
@@ -424,49 +424,6 @@ nav ul li a:after {
     transform: scale(1.02);
     font-weight: 700;
 }
-
-/* Responsive - */
-    /* @media (max-width: 768px) {
-        .pdf {
-            flex-direction: column;
-            gap: 15px;
-            padding: 25px 20px;
-            text-align: center;
-        }
-        
-        .pdf h3 {
-            white-space: normal; 
-            font-size: 16px;
-            line-height: 1.5;
-        }
-        
-        .pdf .btn-download {
-            padding: 12px 25px;
-            font-size: 14px;
-            width: 100%;
-            justify-content: center;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .pdf {
-            padding: 20px 15px;
-            margin-top: 35px;
-        }
-        
-        .pdf h3 {
-            font-size: 14px;
-        }
-        
-        .pdf .btn-download {
-            padding: 10px 20px;
-            font-size: 13px;
-        }
-        
-        .pdf .btn-download i {
-            font-size: 16px;
-        }
-    } */
 
 /* -----------------Contact section---------- */
 .contact{
@@ -590,4 +547,112 @@ footer {
     letter-spacing: 1px;
     margin: 0;
 }
+
+/* -----------------Responsive section---------- */
+/* -----------------TABLET (1024px and below)-----------------*/
+@media (max-width:1024px){
+
+.text h1{
+    font-size:90px;
+    padding-bottom: 10px;
+}
+
+.text h2{
+    font-size:24px;
+    letter-spacing:6px;
+}
+
+/* about  */
+
+.aboutGrid  {
+    height: 50vh;
+}
+.about h2{
+    font-size: 40px;
+}
+.about #abtSub{
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+}
+
+.about p{
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.points {
+    margin-top: 20px;
+    gap: 5px;   
+}
+.points p{
+    font-size: 12px;
+}
+
+.pic img{
+    max-width: 500px;
+} 
+
+/* service */
+
+.service{
+    height:auto;
+    padding:60px 0px;
+    margin-top: 20px;
+}
+.service h2 {
+    font-size: 40px;
+    padding-left: 40px;
+}
+.service #sub{
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+.image img {
+    height: 320px;
+} 
+.image h4{
+    font-size: 16px;
+}
+.image h3{
+    font-size: 20px;
+}
+
+/* gallery */
+
+.gallery{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+.gallery h2{
+    font-size: 40px;
+}
+.gallery #gSub{
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+.gallery-grid{
+    grid-gap: 20px;
+}
+
+.overlay p {
+    font-size: 12px;
+}
+.gallery .btn {
+    padding: 15px 40px;
+}
+
+/* PDF styling */
+.pdf {
+    height: auto;
+}
+
+.pdf .btn-download {
+    padding: 15px 30px;
+    letter-spacing: 1px;
+}
+
+.contact{
+    width:90%;
+}}
 
