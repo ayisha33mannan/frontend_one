@@ -6,6 +6,7 @@
 }
 html{
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 body{
     background: linear-gradient(
@@ -51,7 +52,7 @@ header{
     background-size: cover;
 }
 /* -----------------nav bar---------- */
-nav{
+/* nav{
     padding: 20px;
     text-align: right;
 }
@@ -62,7 +63,7 @@ ul li{
     margin-left: 20px;
 }
 
-/* -----------------nav button animation---------- */
+/* -----------------nav button animation---------- 
 ul li a{
     text-decoration: none;
     color: #EDEDED;
@@ -102,7 +103,239 @@ nav ul li a:after {
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: width, left;
+} */
+
+/* ============================================
+   NAVBAR - FIXED
+   ============================================ */
+/* nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 40px;
+    z-index: 9999;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: rgba(20, 40, 0, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
+
+/* ✅ Navbar shrink on scroll 
+nav.scrolled {
+    padding: 10px 40px;
+    background: rgba(20, 40, 0, 0.98);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ Navbar Links 
+nav ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #EDEDED;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+    border: none;
+    background: none;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #F4CE14;
+}
+
+nav ul li a::after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #F4CE14;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+nav ul li a:hover::after,
+nav ul li a:focus::after {
+    width: 100%;
+    left: 0%;
+}
+
+/* ✅ Active link 
+nav ul li a.active {
+    color: #F4CE14;
+}
+
+nav ul li a.active::after {
+    width: 100%;
+    left: 0%;
+} */
+
+
+/* ============================================
+   NAVBAR - FIXED WITH HAMBURGER (Left Side)
+   ============================================ */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 40px;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(20, 40, 0, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+nav.scrolled {
+    padding: 10px 40px;
+    background: rgba(20, 40, 0, 0.98);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== LOGO ===== */
+.nav-logo {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: #F4CE14;
+    text-decoration: none;
+    letter-spacing: 3px;
+    transition: all 0.3s ease;
+    z-index: 10001;
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
+}
+
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 10001;
+}
+
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #EDEDED;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* ===== NAV LINKS (Desktop) ===== */
+.nav-links {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    list-style: none;
+    display: inline-block;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #EDEDED;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+    border: none;
+    background: none;
+    transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+    color: #F4CE14;
+}
+
+.nav-links li a::after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #F4CE14;
+    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav-links li a:hover::after,
+.nav-links li a:focus::after,
+.nav-links li a.active::after {
+    width: 100%;
+    left: 0%;
+}
+
+.nav-links li a.active {
+    color: #F4CE14;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 
 /* -----------------heading---------- */
 .text{
@@ -553,9 +786,9 @@ footer {
 /* -----------------Responsive section---------- */
 /* -----------------(1100px and below)-----------------*/
 @media (max-width:1100px){
-    .blur::before{
+    /* .blur::before{
         top: 100%;
-    }
+    } */
     .text{
         top: 70%;
     }
@@ -671,17 +904,88 @@ footer {
     header{
         background-image: linear-gradient(rgba(24, 24, 24, 0.7),rgba(24,24,24,0.7)),url(image/two.jpg);
         background-size: cover;
+        background-position: 75% center;
     }
     nav{
-        padding: 40px 0 10px;
+        padding: 40px 5px 10px;
         text-align: center;
     }
-    ul li{
-        margin-left: 0px;
+    .hamburger {
+        display: flex;
     }
 
-    ul li a{
-        font-size: 16px;
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 320px;              
+        max-width: 80vw;           
+        height: 100vh;
+        background: rgba(20, 40, 0, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: flex-start; 
+        align-items: flex-start;    
+        gap: 8px;
+        padding: 100px 30px 40px;   
+        transform: translateX(-100%); 
+        transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        box-shadow: 4px 0 30px rgba(0, 0, 0, 0.3);
+        border-right: 1px solid rgba(244, 206, 20, 0.1);
+        overflow-y: auto;
+    }
+
+    .nav-links.open {
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 0;
+        width:70%;
+    }
+
+    .nav-links li a {
+        font-size: 20px;
+        padding: 12px 15px;
+        display: block;
+        width: 100%;
+        text-align: left;         
+        transition: all 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+        padding-left: 25px;       
+        background: rgba(244, 206, 20, 0.05);
+        border-radius: 8px;
+    }
+
+    .nav-links li a.active {
+        color: #F4CE14;
+        background: rgba(244, 206, 20, 0.05);
+        border-radius: 8px;
+        padding-left: 25px;
+    }
+
+    .nav-links .close-menu {
+        display: none;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    body.menu-open::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9998;
+        animation: fadeIn 0.3s ease;
     }
     .text{
         top: 70%;
@@ -756,21 +1060,37 @@ footer {
 }   
 
 /*-----------------(600px and below)----------------- */
-@media (max-width:600px){ 
+@media (max-width:600px){
+    /* header */    
     nav{
         text-align:center;
-        padding-top: 20px;
-        background-color: #14280074;
+        padding: 20px 20px 10px;
+    }
+    .nav-logo {
+        font-size: 18px;
     }
 
-    ul li{
-        display:block;
-        margin:10px 0;
-    }   
-    /* header */    
-    ul li a{
-        font-size: 12px;
+    .hamburger span {
+        width: 24px;
+        height: 2.5px;
     }
+
+    .nav-links {
+        width: 280px;             
+        max-width: 85vw;
+        padding: 80px 20px 30px;
+    }
+
+    .nav-links li a {
+        font-size: 17px;
+        padding: 10px 12px;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+        padding-left: 20px;
+    }
+
     .text h1 {
         font-size: 60px;
         letter-spacing: 4px;
