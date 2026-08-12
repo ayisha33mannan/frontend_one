@@ -747,7 +747,7 @@ footer {
     header{
         background-image: linear-gradient(rgba(24, 24, 24, 0.7),rgba(24,24,24,0.7)),url(image/two.jpg);
         background-size: cover;
-        background-position: 75% center;
+        background-position: 70% center;
     }
     nav{
         padding: 40px 5px 10px;
