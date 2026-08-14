@@ -83,7 +83,7 @@ nav.scrolled {
     color: #F4CE14;
     text-decoration: none;
     letter-spacing: 3px;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     z-index: 10001;
 }
 
