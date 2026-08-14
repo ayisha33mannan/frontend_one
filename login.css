@@ -12,12 +12,22 @@ html{
 body {
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
-    /* background: #142800; */
     background: url('image/Desktop.png') no-repeat center center fixed;
     background-size: cover;
 }
+/* -----------------font---------- */
+h1{
+    font-family: "Montserrat", sans-serif;
+}
 
-/*NAVBAR*/
+h2, h3, h4{
+    font-family: "Playfair Display", serif;
+}
+
+p, a{
+    font-family: "Inter", sans-serif;
+}
+/*-----------------NAVBAR -----------------*/
 nav {
     position: fixed;
     top: 0;
@@ -87,7 +97,7 @@ nav {
     left: 0%;
 }
 
-/*hamburger*/
+/*-----------------hamburger-----------------*/
 .hamburger {
     display: none;
     flex-direction: column;
@@ -118,11 +128,11 @@ nav {
     transform: rotate(-45deg) translate(5px, -6px);
 }
 
-/* card flip container*/
+/*-----------------card flip container-----------------*/
 .flip-container {
     width: 100%;
     max-width: 420px;
-    height: 520px;
+    height: 560px;
     margin: 110px auto 0;
     perspective: 1000px;
 }
@@ -139,7 +149,7 @@ nav {
     transform: rotateY(180deg);
 }
 
-/* front back*/
+/* -----------------front back-----------------*/
 .flip-front,
 .flip-back {
     position: absolute;
@@ -149,12 +159,12 @@ nav {
     height: 100%;
     backface-visibility: hidden;
     border-radius: 24px;
-    padding: 40px 35px;
+    padding: 35px 30px;
     background: rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(30px);
     border: 1px solid rgba(255, 255, 255, 0.04);
     box-shadow: 0 30px 100px rgba(0, 0, 0, 0.5);
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 .flip-front {
@@ -165,9 +175,8 @@ nav {
     transform: rotateY(180deg);
 }
 
-/* headings */
+/*-----------------headings-----------------*/
 .form-heading {
-    font-family: 'Montserrat', sans-serif;
     font-size: 28px;
     font-weight: 700;
     color: #F4CE14;
@@ -177,11 +186,12 @@ nav {
 }
 
 .form-heading span {
+    font-family: "Playfair Display", serif;
     color: #EDEDED;
     font-weight: 300;
 }
 
-/*innputs */
+/*----------------innputs-----------------*/
 .input-group {
     margin-bottom: 16px;
 }
@@ -202,7 +212,7 @@ nav {
 .input-icon {
     padding: 0 0 0 16px;
     color: rgba(255, 255, 255, 0.15);
-    font-size: 0.9rem;
+    font-size: 16px;
 }
 
 .input-wrapper input {
@@ -213,14 +223,14 @@ nav {
     outline: none;
     color: #EDEDED;
     font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
+    font-size: 16px;
 }
 
 .input-wrapper input::placeholder {
     color: rgba(255, 255, 255, 0.1);
 }
 
-/* options */
+/*-----------------options-----------------*/
 .form-options {
     display: flex;
     justify-content: space-between;
@@ -230,7 +240,7 @@ nav {
 
 .form-options label {
     color: rgba(255, 255, 255, 0.3);
-    font-size: 0.8rem;
+    font-size: 12px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -247,7 +257,7 @@ nav {
 .form-options a {
     color: rgba(255, 255, 255, 0.2);
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 12px;
     transition: color 0.3s ease;
 }
 
@@ -255,7 +265,7 @@ nav {
     color: #F4CE14;
 }
 
-/* submit*/
+/*-----------------submit-----------------*/
 .auth-submit {
     width: 100%;
     padding: 15px;
@@ -265,7 +275,7 @@ nav {
     border-radius: 12px;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    font-size: 0.95rem;
+    font-size: 16px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
     text-transform: uppercase;
@@ -283,7 +293,7 @@ nav {
     transform: none;
 }
 
-/* divider */
+/*-----------------divider----------------*/
 .auth-divider {
     display: flex;
     align-items: center;
@@ -301,12 +311,12 @@ nav {
 
 .auth-divider span {
     color: rgba(255, 255, 255, 0.1);
-    font-size: 0.7rem;
+    font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-/*social icons */
+/*-----------------social icons----------------- */
 .social-buttons {
     display: flex;
     gap: 10px;
@@ -319,7 +329,7 @@ nav {
     border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: 12px;
     color: rgba(255, 255, 255, 0.2);
-    font-size: 1rem;
+    font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -350,7 +360,7 @@ nav {
     text-align: center;
     margin-top: 18px;
     color: rgba(255, 255, 255, 0.2);
-    font-size: 0.85rem;
+    font-size: 14px;
 }
 
 .flip-trigger a {
@@ -366,3 +376,148 @@ nav {
     color: #e6b800;
 }
 
+/*----------------------------------RESPONSIVE---------------------------------- */
+/*-----------------(768px and below)----------------- */
+@media (max-width: 768px) {
+    nav {
+        padding: 12px 20px;
+    }
+
+    .nav-logo {
+        font-size: 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 100vh;
+        background: rgba(20, 40, 0, 0.98);
+        flex-direction: column; 
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 5px;
+        padding: 100px 30px 40px;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease;
+        box-shadow: 4px 0 30px rgba(0, 0, 0, 0.3);
+        border-right: 1px solid rgba(244, 206, 20, 0.1);
+    }
+
+    .nav-links.open {
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-links li a {
+        font-size: 18px;
+        padding: 10px 15px;
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    body.menu-open::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9998;
+    }
+
+    .flip-container {
+        max-width: 400px;
+        height: 520px;
+        margin-top: 90px;
+    }
+
+    .flip-front,
+    .flip-back {
+        padding: 30px 25px;
+        border-radius: 20px;
+    }
+
+    .form-heading {
+        font-size: 24px;
+    }
+
+    .input-wrapper input {
+        padding: 12px 14px;
+        font-size: 16px;
+    }
+
+    .auth-submit {
+        padding: 13px;
+        font-size: 16px;
+    }
+}
+
+/*-----------------(480px and below)----------------- */
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 15px;
+    }
+
+    .nav-logo {
+        font-size: 18px;
+    }
+
+    .flip-container {
+        max-width: 340px;
+        height: 480px;
+        margin-top: 80px;
+    }
+
+    .flip-front,
+    .flip-back {
+        padding: 25px 20px;
+        border-radius: 16px;
+    }
+
+    .form-heading {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .input-wrapper input {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .input-icon {
+        padding-left: 12px;
+        font-size: 12px;
+    }
+
+    .auth-submit {
+        padding: 11px;
+        font-size: 14px;
+    }
+
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .social-btn {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
