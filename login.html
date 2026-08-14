@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OLIYO - Real Estate</title>
+    <!-- icon -->
+    <link rel="shortcut icon" href="image/logo.png">
     <!-- stylesheet -->
     <link rel="stylesheet" href="login.css">
     <!--google fonts -->
@@ -32,11 +34,11 @@
         
         <!-- nav links -->
         <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#gallery">Properties</a></li>
-            <li><a href="login.html" class="active">Login</a></li>
+            <li class="anchor"><a href="index.html">Home</a></li>
+            <li class="anchor"><a href="#about">About</a></li>
+            <li class="anchor"><a href="#services">Services</a></li>
+            <li class="anchor"><a href="#gallery">Properties</a></li>
+            <li class="anchor"><a href="login.html" class="active">Login</a></li>
         </ul>
     </nav>
 
@@ -46,24 +48,24 @@
 
             <!--front -->
             <div class="flip-front">
-                <h2 class="form-heading">LOG <span>IN</span></h2>
+                <h2 class="form-heading" id="gsap">LOG <span>IN</span></h2>
 
                 <form onsubmit="event.preventDefault();">
-                    <div class="input-group">
+                    <div class="input-group" id="gsap">
                         <div class="input-wrapper">
                             <span class="input-icon"><i class="fas fa-envelope"></i></span>
                             <input type="email" placeholder="Email" required>
                         </div>
                     </div>
 
-                    <div class="input-group">
+                    <div class="input-group" id="gsap">
                         <div class="input-wrapper">
                             <span class="input-icon"><i class="fas fa-lock"></i></span>
                             <input type="password" placeholder="Password" required>
                         </div>
                     </div>
 
-                    <div class="form-options">
+                    <div class="form-options" id="gsap">
                         <label>
                             <input type="checkbox" checked> Remember me
                         </label>
@@ -75,17 +77,17 @@
                     </button>
                 </form>
 
-                <div class="auth-divider">
+                <div class="auth-divider" id="gsapp">
                     <span>Or</span>
                 </div>
 
-                <div class="social-buttons">
+                <div class="social-buttons" id="gsapp">
                     <button class="social-btn google"><i class="fab fa-google"></i></button>
                     <button class="social-btn github"><i class="fab fa-github"></i></button>
                     <button class="social-btn twitter"><i class="fab fa-twitter"></i></button>
                 </div>
 
-                <div class="flip-trigger">
+                <div class="flip-trigger" id="gsapp">
                     Don't have an account? <a onclick="flipCard()">Sign Up</a>
                 </div>
             </div>
@@ -144,6 +146,10 @@
         </div>
     </div>
 
+     <!-- gsap   link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js" integrity="sha512-oJ8QbaQThQoJZ7oEv+29jfPM6CcP+zUxh3PKJs1vyOhx0UraUrE7PQgeItu3dOuCJyrzWpoYMsVjkkPEBzbUqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- lenis js -->
+    <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script> 
     <!-- script file -->
     <script src="login.js"></script>
 </body>
