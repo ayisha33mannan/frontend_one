@@ -1,3 +1,22 @@
+// lenis smooth scroll
+// Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+
+// preloader
+setTimeout(() =>
+    {
+        const preloader = document.getElementById('preloader');
+        preloader.style.opacity = '0';
+        setTimeout(() => { preloader.style.display = 'none'; }, 1000);
+    }, 300);
+
 // ham toggle menu
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
@@ -16,6 +35,40 @@ document.querySelectorAll('.nav-links li a').forEach(function(link) {
         body.classList.remove('menu-open');
     });
 });
+
+
+// GSAP Animation
+
+// nav bar
+gsap.from(".anchor",{
+    y:-30,
+    opacity:0,
+    duration: 1,
+    delay:0.5,
+    stagger: 0.3,
+})
+
+// GSAP timeline Animation
+var tl = gsap.timeline()
+
+tl.from("#gsap",{
+    y:-30,
+    opacity:0,
+    duration: 1,
+    delay:0.5,
+    stagger: 0.3,
+})
+tl.from(".auth-submit",{
+    opacity:0,
+    duration: 0.7 ,
+})
+
+tl.from("#gsapp",{
+    y:-30,
+    opacity:0,
+    duration: 0.5,
+    stagger: 0.3,
+})
 
 // card flip
 function flipCard() {
