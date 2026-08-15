@@ -17,6 +17,17 @@ setTimeout(() =>
         setTimeout(() => { preloader.style.display = 'none'; }, 1000);
     }, 300);
 
+// nav bar on scroll
+const nav = document.querySelector('nav');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
+
 // ham toggle menu
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
