@@ -55,11 +55,12 @@ tl.from("#gsap",{
     y:-30,
     opacity:0,
     duration: 1,
+    delay:0.5,
     stagger: 0.3,
 })
 tl.from(".auth-submit",{
     opacity:0,
-    duration: 0.7 ,
+    duration: 0.1,
 })
 
 tl.from("#gsapp",{
